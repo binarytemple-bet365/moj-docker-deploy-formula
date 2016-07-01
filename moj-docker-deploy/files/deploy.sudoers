@@ -1,1 +1,2 @@
-deploy ALL= NOPASSWD: /usr/local/bin/salt_utils.py, /usr/bin/salt \* grains.*, /usr/bin/salt-call grains.*
+Defaults        env_keep += "GH_TOKEN"
+deploy ALL= NOPASSWD: /usr/local/bin/salt_utils.py, /usr/bin/salt \* grains.*, /usr/bin/salt-call grains.*, /usr/bin/salt-call github_user.addremove_user
